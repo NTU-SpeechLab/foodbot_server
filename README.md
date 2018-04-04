@@ -35,11 +35,8 @@ List of packages required to install before running the client:
 
     sys_log_dir/verbose.log => /local/foodchatbot/webUI/logs/errors.log
 
-2. Update your client access token to your bot agent (src/apiai_connector.py) 
+2. Prepare the database
 
-    CLIENT_ACCESS_TOKEN = 'YOUR_AGENT_ACCESS_TOKEN'
-
-3. Prepare the database
   * Update the user/password for mysql: Notes on this line in src/intents/foods_order.py, fnb_data.py, fnb_definition.py
     
     engine = create_engine('mysql+mysqlconnector://root:<yourpassword>@localhost/canteena_fnb', pool_recycle=3600)
