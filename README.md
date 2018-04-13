@@ -33,13 +33,15 @@ List of packages required to install before running the client:
 
 1. Update the path to logs folder (in src/mlogging/logging.json): should replace the actual path in your server, for example: 
 
-    sys_log_dir/verbose.log => /local/foodchatbot/webUI/logs/errors.log
+    sys_log_dir/verbose.log => /local/foodchatbot/webUI/logs/verbose.log
+    sys_log_dir/info.log => /local/foodchatbot/webUI/logs/info.log
+    sys_log_dir/errors.log => /local/foodchatbot/webUI/logs/errors.log
 
 2. Prepare the database
 
   * Update the user/password for mysql: Notes on this line in src/intents/foods_order.py, fnb_data.py, fnb_definition.py
     
-    engine = create_engine('mysql+mysqlconnector://root:<yourpassword>@localhost/canteena_fnb', pool_recycle=3600)
+    engine = create_engine('mysql+mysqlconnector://<your_sql_username>:<your_sql_password>@localhost/canteena_fnb', pool_recycle=3600)
     
   * Create the database named 'canteena_fnb'
   
