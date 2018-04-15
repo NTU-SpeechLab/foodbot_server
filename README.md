@@ -45,7 +45,8 @@ List of packages required to install before running the client:
 
   * Update the user/password for mysql: Notes on this line in src/intents/foods_order.py, fnb_data.py, fnb_definition.py
     
-    engine = create_engine('mysql+mysqlconnector://<your_sql_username>:<your_sql_password>@localhost/canteena_fnb', pool_recycle=3600)
+        $ engine = create_engine('mysql+mysqlconnector://<your_sql_username>:<your_sql_password>@localhost/canteena_fnb', pool_recycle=3600)
+    
     
   * Create the database named 'canteena_fnb'
   
