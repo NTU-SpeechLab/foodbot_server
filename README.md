@@ -31,11 +31,12 @@ List of packages required to install before running the client:
 
 # Notes before running
 
-1. Update the path to logs folder (in src/mlogging/logging.json): should replace the actual path in your server, for example: 
+1. Update the path to logs folder (in src/mlogging/logging.json, renaming logging_template.json to logging.json): should replace the actual path in your server, for example you put your code to /local/foodchatbot/webUI, then the path must be updated to: 
 
-    sys_log_dir/verbose.log => /local/foodchatbot/webUI/logs/verbose.log
-    sys_log_dir/info.log => /local/foodchatbot/webUI/logs/info.log
-    sys_log_dir/errors.log => /local/foodchatbot/webUI/logs/errors.log
+    
+         sys_log_dir/verbose.log => /local/foodchatbot/webUI/logs/verbose.log
+         sys_log_dir/info.log => /local/foodchatbot/webUI/logs/info.log
+         sys_log_dir/errors.log => /local/foodchatbot/webUI/logs/errors.log
 
 2. Prepare the database
 
@@ -48,9 +49,8 @@ List of packages required to install before running the client:
   * Running these scripts to populate data to tables
   
   
-      $ python fnb_definition.py
-    
-      $ python fnb_data.py
+        $ python fnb_definition.py
+        $ python fnb_data.py
 
 
 # Running the web service - server
