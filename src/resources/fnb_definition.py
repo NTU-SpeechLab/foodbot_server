@@ -98,7 +98,7 @@ class OrderDetail(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     no = Column(Integer)
     fnbname = Column(String(20))
-    side_id = Column(Integer)
+    side_id = Column(String(20))
     user_id = Column(String(20))
 
     #--------------------------------------------------------------------------
