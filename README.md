@@ -11,7 +11,10 @@ More about the dialogflow framework here: https://dialogflow.com/
 
 # What is this service doing?
 
- * 
+ * Receiving JSON request from dialogflow, and format this request, extract the intent/entities from this JSON request
+ * Mapping the intent name with defined function in the list -> call this function to get response 
+ * Can return the response in text, basic cards (images), and quick replies.
+ 
 
 # Dependencies
 List of packages required to install before running the client:
