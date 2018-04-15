@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from fnb_definition import *
 
-engine = create_engine('mysql+mysqlconnector://root:<yourpassword>@localhost/canteena_fnb?charset=utf8mb4',encoding='utf8')
+engine = create_engine('mysql+mysqlconnector://<your_sql_username>:<your_sql_password>@localhost/canteena_fnb?charset=utf8',encoding='utf8')
 
 # create a Session
 Session = sessionmaker(bind=engine)
@@ -17,7 +17,7 @@ food = Food("char kway teow", "local",
 session.add(food)
 
 food = Food("hokkien prawn mee", "chinese",
-            "Hokkien Prawn Mee, also affectionately known as 福建蝦麵, is another favourite of every local in Singapore.",
+            "Hokkien Prawn Mee, is another favourite of every local in Singapore.",
             3.2, "https://rasamalaysia.com/wp-content/uploads/2011/01/hokkien-mee-8.jpg")
 session.add(food)
 
@@ -40,7 +40,7 @@ food = Food("nasi lemak", "malay", "Nasi lemak is a Malay fragrant rice dish coo
             3.6, "https://d1alt1wkdk73qo.cloudfront.net/images/guide/6abb55670f06cebacdc5023d11367153/640x478_ac.jpg")
 session.add(food)
 
-food = Food("bak chor mee", "Chinese", " Bak Chor Mee (肉脞面) literally means “minced meat and noodles” in the Teochew dialect. ",
+food = Food("bak chor mee", "Chinese", " Bak Chor Mee literally means “minced meat and noodles” in the Teochew dialect. ",
             3.7, "https://mtc1-dydfxmh.netdna-ssl.com/wp-content/uploads/2017/03/P1040774-1300x867.jpg")
 session.add(food)
 
@@ -85,15 +85,15 @@ food = Food("bee hoon", "chinese", "Rice vermicelli are a thin form of rice nood
             4.0, "https://s3-ap-southeast-1.amazonaws.com/afc-prod/thumbnails/standard_mobile/5415/0286/1193/tn-HFM-Braised-Pig-Trotter-Bee-Hoon.jpg")
 session.add(food)
 
-food = Food("bun bo hue", "vietnamese", "Bún bò Huế or bún bò is a popular Vietnamese soup containing rice vermicelli (bún) and beef (bò). Huế is a city in central Vietnam associated with the cooking style of the former royal court. The dish is greatly admired for its balance of spicy, sour, salty and sweet flavors and the predominant flavor is that of lemon grass.",
+food = Food("bun bo hue", "vietnamese", "Bun bo Hue or bun bo is a popular Vietnamese soup containing rice vermicelli (bun) and beef (bò). Huế is a city in central Vietnam associated with the cooking style of the former royal court. The dish is greatly admired for its balance of spicy, sour, salty and sweet flavors and the predominant flavor is that of lemon grass.",
             4.0, "https://media.foody.vn/res/g65/642530/prof/s/foody-mobile-ba-thu-jpg-537-636255976625248994.jpg")
 session.add(food)
 
-food = Food("pho bo", "vietnamese", "Phở or pho is a Vietnamese soup consisting of broth, rice noodles called bánh phở, a few herbs, and meat, primarily made with either beef or chicken. ",
+food = Food("pho bo", "vietnamese", "Pho is a Vietnamese soup consisting of broth, rice noodles called 'banh pho', a few herbs, and meat, primarily made with either beef or chicken. ",
             4.0, "http://thila.com.vn/en/upload/pho-bo-bap-hoa-30-11-2017-17-52-15.jpg?w=400&h=400&zc=0&q=100&")
 session.add(food)
 
-food = Food("pho", "vietnamese", "Phở or pho is a Vietnamese soup consisting of broth, rice noodles called bánh phở, a few herbs, and meat, primarily made with either beef or chicken. ",
+food = Food("pho", "vietnamese", "Pho is a Vietnamese soup consisting of broth, rice noodles called 'banh pho', a few herbs, and meat, primarily made with either beef or chicken. ",
             4.0, "https://taxiairport.vn/uploads/ckeditor/images/%5E7773CA1C492E6FA75D868CBFEEEB798876EDFC409543529799%5Epimgpsh_fullsize_distr.png")
 session.add(food)
 
