@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, backref
 
 ###############################################################################
-engine = create_engine('mysql+mysqlconnector://root:<yourpassword>@localhost/canteena_fnb?charset=utf8mb4',encoding='utf8')
+engine = create_engine('mysql+mysqlconnector://<your_sql_username>:<your_sql_password>@localhost/canteena_fnb?charset=utf8',encoding='utf8')
 Base = declarative_base()
 
 #######################################################################
@@ -20,7 +20,7 @@ class Food(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     fname = Column(String(50), primary_key=True)
     ftype = Column(String(20))
-    fdesc = Column(String(200))
+    fdesc = Column(String(500))
     fimg  = Column(String(400))
     fprice = Column(Float)
 
